@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>East Ridge Lights</title>
+<meta name="description" content="East Ridge Lights Halloween Light Show">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #05030a; }
+  body { min-height: 100vh; display: grid; place-items: center; overflow-x: hidden; }
+  .show { position: relative; width: min(100vw, 1536px); line-height: 0; }
+  .show img { display: block; width: 100%; height: auto; user-select: none; }
+  .hotspot {
+    position: absolute;
+    display: block;
+    border-radius: 18% 18% 8% 8%;
+    text-indent: -9999px;
+    outline: none;
+    transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+  }
+  .hotspot:hover, .hotspot:focus-visible {
+    transform: scale(1.025);
+    background: rgba(255,255,255,.035);
+    box-shadow: 0 0 28px rgba(255,255,255,.18), inset 0 0 18px rgba(255,255,255,.08);
+  }
+  .hotspot:active { transform: scale(.99); }
+  .donate { left: 11.5%; top: 41%; width: 23%; height: 43%; }
+  .control { left: 39%; top: 41%; width: 23%; height: 43%; }
+  .facebook { left: 66%; top: 41%; width: 23%; height: 43%; }
+  @media (max-width: 700px) {
+    .hotspot { border-radius: 15%; }
+  }
+</style>
+</head>
+<body>
+  <main class="show" aria-label="East Ridge Lights Halloween Light Show">
+    <img src="east-ridge-lights.png" alt="East Ridge Lights Halloween light show with Donate, Control, and Facebook buttons">
+
+    <a class="hotspot donate"
+       href="https://venmo.com/u/EastRidgeLights"
+       target="_blank" rel="noopener noreferrer"
+       aria-label="Donate to East Ridge Lights on Venmo">Donate</a>
+
+    <a class="hotspot control"
+       href="https://eastridgelights.remotefalcon.com/"
+       target="_blank" rel="noopener noreferrer"
+       aria-label="Control the East Ridge Lights show">Control</a>
+
+    <a class="hotspot facebook"
+       href="https://www.facebook.com/eastridgelights"
+       target="_blank" rel="noopener noreferrer"
+       aria-label="Visit East Ridge Lights on Facebook">Facebook</a>
+  </main>
+</body>
+</html>
